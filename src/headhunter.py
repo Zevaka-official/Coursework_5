@@ -9,7 +9,7 @@ class HeadHunter:
 
     _base_url = "https://api.hh.ru/vacancies"
 
-    def __init__(self, vacancy_area=100, page=0, per_page=50) -> None:
+    def __init__(self, vacancy_area=113, page=0, per_page=50) -> None:
         """
         Инициализатор экземпляров класса для работы с API
         :param vacancy_area: область поиска
@@ -105,7 +105,7 @@ class HeadHunter:
                 return
 
         try:
-            with open(filepath, 'w') as file:
+            with open(filepath, 'w', encoding='utf-8') as file:
                 json.dump(vacancy_list, file, indent=2, ensure_ascii=False)
             print(f'Данные успешно записаны в файл {filename}')
         except Exception as e:

@@ -1,4 +1,4 @@
-from sql.db_requests import get_all_employers_query, get_all_vacancies_query, get_avg_salary_query, get_high_salary_query
+from sql.db_requests import *
 
 
 def user_interaction(db_manager):
@@ -48,4 +48,4 @@ def user_interaction(db_manager):
             print('По вашему запросу не нашлось вакансий')
 
     else:
-        exit('Опций больше нет')
+        exit('Вот и все опции. Спасибо за внимание ;)')
