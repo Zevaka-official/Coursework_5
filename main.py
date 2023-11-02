@@ -12,7 +12,7 @@ def main():
 
     while 1:
         db_name = input('Введите слово на английском для названия базы данных: ')
-        if all(one_letter in 'abcdefghijklmnopqrstuvwxyz1234567890' for one_letter in db_name):
+        if db_name.isalnum():
             db = DBManager()
             break
         else:
@@ -28,5 +28,5 @@ def main():
     user_interaction(db)
 
 
-if __name__ == 'main':
+if __name__ == '__main__':
     main()
